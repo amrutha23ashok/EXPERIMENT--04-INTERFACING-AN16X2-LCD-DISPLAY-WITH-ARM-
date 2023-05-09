@@ -173,11 +173,37 @@ https://engineeringxpert.com/wp-content/uploads/2022/04/26.png
 
 
 ## STM 32 CUBE PROGRAM :
-
-
-
+'''
+'''
+NAME :AMRUTHA.S.A
+REG NO :22007438
+#include "main.h"
+#include "lcd.h"
+void SystemClock_Config(void);
+static void MX_GPIO_Init(void);
+int main(void)
+{
+  HAL_Init();
+  SystemClock_Config();
+  MX_GPIO_Init();
+  	  Lcd_PortType ports[]={GPIOA,GPIOA,GPIOA,GPIOA};
+  	  Lcd_PinType pins[]={GPIO_PIN_3,GPIO_PIN_2,GPIO_PIN_1,GPIO_PIN_0};
+  	  Lcd_HandleTypeDef lcd;
+  	  lcd=Lcd_create(ports,pins,GPIOB,GPIO_PIN_0,GPIOB,GPIO_PIN_1,LCD_4_BIT_MODE);
+  	  Lcd_cursor(&lcd,0,1);
+  	  Lcd_string(&lcd,"PALLAVI");
+  while (1)
+  {
+    	Lcd_cursor(&lcd,1,1);
+    	  	  Lcd_string(&lcd,x);
+  }
+}
+'''
 
 ## Output screen shots of proteus  :
+IMAGE[](https://user-images.githubusercontent.com/94184828/234639932-85f053f5-1213-4a6b-88d3-b3edc3c95752.png)
+IMAGE[](https://github.com/Pallavi-Raveendranadreddy/EXPERIMENT--04-INTERFACING-AN16X2-LCD-DISPLAY-WITH-ARM-/blob/60362099c457a714404e47e02f0c10974aad3209/lcd%201.png)
+IMAGE[](https://user-images.githubusercontent.com/94184828/234642003-0358fc35-704d-4982-aae9-3e39b358ff0c.png)
  
  
  ## CIRCUIT DIAGRAM (EXPORT THE GRAPHICS TO PDF AND ADD THE SCREEN SHOT HERE): 
